@@ -1,0 +1,15 @@
+{
+  "name": "alvaro/simpledispatcher",
+  "description": "Simple event dispatcher",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Tests\\" : "tests/"
+    }
+  }
+}
