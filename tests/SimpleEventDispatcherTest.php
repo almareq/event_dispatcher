@@ -19,8 +19,8 @@ class SimpleEventDispatcherTest extends TestCase
 
         $sut = new SimpleEventDispatcher([ShippingArrived::class => [$subscriber]]);
 
-        $sut->dispatchAll([new ShippingArrived(true)]);
+        $sut->dispatchAll([ShippingArrived::onTime()]);
 
-        $this->assertTrue($subscriber->event->arrivedWithDelay());
+        $this->assertFalse($subscriber->event->arrivedWithDelay());
     }
 }
